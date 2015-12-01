@@ -107,8 +107,8 @@ def trigram_split(filename):
     import itertools
     import codecs
 
-    single_quotes = re.compile(u"[’‘']")
-    double_quotes = re.compile(u'[“„\u201d"]')
+    single_quotes = re.compile(u"[\u2019\u2018']")
+    double_quotes = re.compile(u'[\u201C\u201E\u201d"]')
     end_of_sentence = re.compile(u'[!?.\u2026]')
     trash = re.compile(r'["#$%&(),*+/:;\-<=>@^_`{|}~\[\]]' +  # punctuation
                        r"|('+\B)" +  # quotes at the end of the word
